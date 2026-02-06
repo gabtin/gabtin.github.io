@@ -18,7 +18,7 @@ export default function ReadingPage() {
   return (
     <div>
       <section className="mb-16">
-        <div className="section-marker mb-6">// READING</div>
+        <div className="section-marker mb-6">{'// READING'}</div>
         <div className="accent-line pt-8">
           <h1 className="text-foreground mb-6">{title || 'Reading'}</h1>
           {subtitle && (
@@ -32,7 +32,7 @@ export default function ReadingPage() {
       {currentlyReading.length > 0 && (
         <section className="mb-16">
           <div className="flex items-center gap-4 mb-6">
-            <div className="section-marker">// IN PROGRESS</div>
+            <div className="section-marker">{'// IN PROGRESS'}</div>
             <div className="flex-1 border-t border-slate-200/60" />
           </div>
           <div className="space-y-4">
@@ -46,7 +46,7 @@ export default function ReadingPage() {
       {finished.length > 0 && (
         <section className="mb-16">
           <div className="flex items-center gap-4 mb-6">
-            <div className="section-marker">// COMPLETED</div>
+            <div className="section-marker">{'// COMPLETED'}</div>
             <div className="flex-1 border-t border-slate-200/60" />
           </div>
           <div className="space-y-4">
@@ -60,7 +60,7 @@ export default function ReadingPage() {
       {abandoned.length > 0 && (
         <section className="mb-16">
           <div className="flex items-center gap-4 mb-6">
-            <div className="section-marker">// ABANDONED</div>
+            <div className="section-marker">{'// ABANDONED'}</div>
             <div className="flex-1 border-t border-slate-200/60" />
           </div>
           <div className="space-y-4">

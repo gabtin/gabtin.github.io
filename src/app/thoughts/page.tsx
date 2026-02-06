@@ -14,7 +14,7 @@ export default function ThoughtsPage() {
   return (
     <div>
       <section className="mb-16">
-        <div className="section-marker mb-6">// THOUGHTS</div>
+        <div className="section-marker mb-6">{'// THOUGHTS'}</div>
         <div className="accent-line pt-8">
           <h1 className="text-foreground mb-6">{title || 'Thoughts'}</h1>
           {subtitle && (
