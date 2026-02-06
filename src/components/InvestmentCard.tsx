@@ -6,10 +6,10 @@ interface InvestmentCardProps {
 }
 
 export default function InvestmentCard({ investment }: InvestmentCardProps) {
-  const statusStyles: Record<string, string> = {
-    holding: 'color: #22c55e; background: rgba(34, 197, 94, 0.15)',
-    watching: 'color: var(--accent); background: var(--accent-dim)',
-    exited: 'color: var(--muted); background: rgba(100, 116, 139, 0.15)',
+  const statusStyles: Record<string, React.CSSProperties> = {
+    holding: { color: '#22c55e', background: 'rgba(34, 197, 94, 0.15)' },
+    watching: { color: 'var(--accent)', background: 'var(--accent-dim)' },
+    exited: { color: 'var(--muted)', background: 'rgba(100, 116, 139, 0.15)' },
   };
 
   return (
@@ -27,7 +27,7 @@ export default function InvestmentCard({ investment }: InvestmentCardProps) {
         </div>
         <span
           className="px-2 py-0.5 text-xs font-mono rounded"
-          style={{ cssText: statusStyles[investment.status] }}
+          style={statusStyles[investment.status]}
         >
           {investment.status}
         </span>
