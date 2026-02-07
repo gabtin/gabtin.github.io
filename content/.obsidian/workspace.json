@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "listening/practical-nerds.mdx",
+                "file": "reading.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "practical-nerds"
+              "title": "reading"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "listening/practical-nerds.mdx",
+                "file": "reading.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for practical-nerds"
+              "title": "Backlinks for reading"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "listening/practical-nerds.mdx",
+                "file": "reading.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from practical-nerds"
+              "title": "Outgoing links from reading"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "listening/practical-nerds.mdx",
+                "file": "reading.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of practical-nerds"
+              "title": "Outline of reading"
             }
           },
           {
@@ -197,15 +197,16 @@
   },
   "active": "ecafbafac8534a76",
   "lastOpenFiles": [
+    "substack.md",
+    "podcast.md",
+    "listening.md",
+    "listening/practical-nerds.mdx",
     "investments/botcrew.mdx",
     "about.md",
     "home.md",
     "listening/titans-of-nuclear.mdx",
     "listening/quanta-podcast.mdx",
-    "listening/practical-nerds.mdx",
     "listening/mindscape-podcast.mdx",
-    "podcast.md",
-    "listening.md",
     "records/ok-computer.md",
     "records/rebirth-of-cool.md",
     "records/the-division-bell.md",
@@ -231,7 +232,6 @@
     "images",
     "records",
     "thoughts.md",
-    "substack.md",
     "thoughts/quick-note-compounding.mdx"
   ]
 }
