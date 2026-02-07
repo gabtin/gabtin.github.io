@@ -11,9 +11,17 @@ export default function InvestmentsPage() {
   const investments = getInvestments();
   const { title, subtitle } = getPageContent('investments');
 
-  const holding = investments.filter((i) => i.status === 'holding');
-  const watching = investments.filter((i) => i.status === 'watching');
-  const exited = investments.filter((i) => i.status === 'exited');
+  // Group investments by status dynamically
+  const investmentsByStatus = investments.reduce((acc, investment) => {
+    const status = investment.status || 'uncategorized';
+    if (!acc[status]) {
+      acc[status] = [];
+    }
+    acc[status].push(investment);
+    return acc;
+  }, {} as Record<string, typeof investments>);
+
+  const statuses = Object.keys(investmentsByStatus);
 
   return (
     <div>
@@ -26,38 +34,16 @@ export default function InvestmentsPage() {
         )}
       </section>
 
-      {holding.length > 0 && (
-        <section className="mb-12">
-          <h2 className="font-mono text-lg text-foreground mb-6">Current holdings</h2>
+      {statuses.map((status) => (
+        <section key={status} className="mb-12">
+          <h2 className="font-mono text-lg text-foreground mb-6">{status}</h2>
           <div className="space-y-4">
-            {holding.map((investment) => (
+            {investmentsByStatus[status].map((investment) => (
               <InvestmentCard key={investment.slug} investment={investment} />
             ))}
           </div>
         </section>
-      )}
-
-      {watching.length > 0 && (
-        <section className="mb-12">
-          <h2 className="font-mono text-lg text-foreground mb-6">Watching</h2>
-          <div className="space-y-4">
-            {watching.map((investment) => (
-              <InvestmentCard key={investment.slug} investment={investment} />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {exited.length > 0 && (
-        <section className="mb-12">
-          <h2 className="font-mono text-lg text-foreground mb-6">Exited positions</h2>
-          <div className="space-y-4">
-            {exited.map((investment) => (
-              <InvestmentCard key={investment.slug} investment={investment} />
-            ))}
-          </div>
-        </section>
-      )}
+      ))}
 
       {investments.length === 0 && (
         <p className="text-slate-500">No investments documented yet. Check back soon.</p>

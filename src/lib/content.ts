@@ -9,8 +9,8 @@ export interface Book {
   title: string;
   author: string;
   rating?: number;
-  dateRead: string;
-  status: 'finished' | 'reading' | 'abandoned';
+  status?: string;
+  genre?: string;
   cover?: string;
   content: string;
 }
@@ -39,10 +39,9 @@ export interface Thought {
 export interface Investment {
   slug: string;
   company: string;
-  ticker?: string;
-  status: 'holding' | 'watching' | 'exited';
+  status?: string;
+  entryPoint?: string;
   thesis: string;
-  dateAdded: string;
   content: string;
 }
 
@@ -70,7 +69,7 @@ function parseFile<T>(dir: string, fileName: string): T & { content: string; slu
 export function getBooks(): Book[] {
   const files = getFilesFromDirectory('books');
   const books = files.map((file) => parseFile<Omit<Book, 'content' | 'slug'>>('books', file));
-  return books.sort((a, b) => new Date(b.dateRead).getTime() - new Date(a.dateRead).getTime());
+  return books.sort((a, b) => a.title.localeCompare(b.title));
 }
 
 export function getBook(slug: string): Book | null {
@@ -124,7 +123,7 @@ export function getThoughtSlugs(): string[] {
 export function getInvestments(): Investment[] {
   const files = getFilesFromDirectory('investments');
   const investments = files.map((file) => parseFile<Omit<Investment, 'content' | 'slug'>>('investments', file));
-  return investments.sort((a, b) => new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime());
+  return investments.sort((a, b) => a.company.localeCompare(b.company));
 }
 
 export function getInvestment(slug: string): Investment | null {
@@ -180,17 +179,6 @@ export interface ActivityItem {
 export function getRecentActivity(limit: number = 10): ActivityItem[] {
   const activities: ActivityItem[] = [];
 
-  // Get recent books
-  const books = getBooks().slice(0, 5);
-  books.forEach((book) => {
-    activities.push({
-      type: 'book',
-      title: `Read: ${book.title}`,
-      date: book.dateRead,
-      href: '/reading',
-      preview: `by ${book.author}`,
-    });
-  });
 
   // Get recent listening
   const listening = getListeningItems().slice(0, 5);
@@ -214,18 +202,6 @@ export function getRecentActivity(limit: number = 10): ActivityItem[] {
       slug: thought.slug,
       href: thought.slug ? `/thoughts/${thought.slug}` : '/thoughts',
       preview: thought.description,
-    });
-  });
-
-  // Get recent investments
-  const investments = getInvestments().slice(0, 3);
-  investments.forEach((inv) => {
-    activities.push({
-      type: 'investment',
-      title: `Investment: ${inv.company}`,
-      date: inv.dateAdded,
-      href: '/investments',
-      preview: inv.thesis,
     });
   });
 

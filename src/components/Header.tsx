@@ -5,11 +5,11 @@ import { usePathname } from 'next/navigation';
 
 const navigation = [
   { name: 'About', href: '/about' },
+  { name: 'Thoughts', href: '/thoughts', dividerAfter: true },
   { name: 'Reading', href: '/reading' },
   { name: 'Listening', href: '/listening' },
-  { name: 'Thoughts', href: '/thoughts' },
   { name: 'Investments', href: '/investments' },
-  { name: 'Substack', href: '/substack' },
+  { name: 'Podcast', href: '/podcast' },
 ];
 
 export default function Header() {
@@ -31,17 +31,19 @@ export default function Header() {
             {navigation.map((item) => {
               const isActive = pathname === item.href || pathname?.startsWith(item.href + '/');
               return (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="font-pixel text-lg md:text-xl hidden md:block"
-                  style={{
-                    textDecoration: isActive ? 'none' : 'underline',
-                    textUnderlineOffset: '3px'
-                  }}
-                >
-                  {isActive && '>'}{item.name}
-                </Link>
+                <span key={item.name} className="hidden md:flex items-center gap-4 md:gap-6">
+                  <Link
+                    href={item.href}
+                    className="font-pixel text-lg md:text-xl"
+                    style={{
+                      textDecoration: isActive ? 'none' : 'underline',
+                      textUnderlineOffset: '3px'
+                    }}
+                  >
+                    {isActive && '>'}{item.name}
+                  </Link>
+                  {item.dividerAfter && <span className="font-pixel text-lg md:text-xl text-muted">|</span>}
+                </span>
               );
             })}
             {/* Mobile */}

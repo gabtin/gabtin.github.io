@@ -1,6 +1,7 @@
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://www.linkedin.com/in/gabrieletinelli/' },
   { name: 'Substack', href: 'https://gabrieletinelli.substack.com' },
+  { name: 'Spotify', href: 'https://open.spotify.com/show/1y5r74qzatrFOaxGbDf6iA' },
 ];
 
 export default function Footer() {

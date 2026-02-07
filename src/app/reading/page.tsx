@@ -11,9 +11,17 @@ export default function ReadingPage() {
   const books = getBooks();
   const { title, subtitle } = getPageContent('reading');
 
-  const currentlyReading = books.filter((b) => b.status === 'reading');
-  const finished = books.filter((b) => b.status === 'finished');
-  const abandoned = books.filter((b) => b.status === 'abandoned');
+  // Group books by genre dynamically
+  const booksByGenre = books.reduce((acc, book) => {
+    const genre = book.genre || 'uncategorized';
+    if (!acc[genre]) {
+      acc[genre] = [];
+    }
+    acc[genre].push(book);
+    return acc;
+  }, {} as Record<string, typeof books>);
+
+  const genres = Object.keys(booksByGenre);
 
   return (
     <div>
@@ -29,47 +37,19 @@ export default function ReadingPage() {
         </div>
       </section>
 
-      {currentlyReading.length > 0 && (
-        <section className="mb-16">
+      {genres.map((genre) => (
+        <section key={genre} className="mb-16">
           <div className="flex items-center gap-4 mb-6">
-            <div className="section-marker">{'// IN PROGRESS'}</div>
+            <div className="section-marker">{`// ${genre.toUpperCase()}`}</div>
             <div className="flex-1 border-t border-slate-200/60" />
           </div>
           <div className="space-y-4">
-            {currentlyReading.map((book) => (
+            {booksByGenre[genre].map((book) => (
               <BookCard key={book.slug} book={book} />
             ))}
           </div>
         </section>
-      )}
-
-      {finished.length > 0 && (
-        <section className="mb-16">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="section-marker">{'// COMPLETED'}</div>
-            <div className="flex-1 border-t border-slate-200/60" />
-          </div>
-          <div className="space-y-4">
-            {finished.map((book) => (
-              <BookCard key={book.slug} book={book} />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {abandoned.length > 0 && (
-        <section className="mb-16">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="section-marker">{'// ABANDONED'}</div>
-            <div className="flex-1 border-t border-slate-200/60" />
-          </div>
-          <div className="space-y-4">
-            {abandoned.map((book) => (
-              <BookCard key={book.slug} book={book} />
-            ))}
-          </div>
-        </section>
-      )}
+      ))}
 
       {books.length === 0 && (
         <p className="text-slate-500">No books logged yet. Check back soon.</p>
