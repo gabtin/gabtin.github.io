@@ -3,7 +3,9 @@ title: "About"
 ---
 Gabriele. Berlin-based. Southern-italian. From [this tiny town](https://www.google.com/maps/search/NOCI,%20BA). 
 
-Aerospace engineer by training, investor at [Foundamental](https://www.foundamental.com/) - where I look for hardware and robotics businesses that will either (1) become the next generation of universal tooling for their industry or (2) perform $100B+ in physical work over the next decade.
+Aerospace engineer by training, investor at [Foundamental](https://www.foundamental.com/).
+
+I look for hardware and robotics businesses that will either (1) become the next generation of universal tooling for their industry or (2) perform $100B+ in physical work over the next decade.
 
 I was born in a family of two music teachers. My grandpa (on the right) was a great plumber and grew more veggies than my grandma could ever cook. My grandma (on the left) is a literal superhero who raised 3 girls on her own.
 

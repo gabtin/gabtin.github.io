@@ -5,6 +5,10 @@ import Layout from "@/components/Layout";
 export const metadata: Metadata = {
   title: "Gabriele Tinelli",
   description: "Personal website of Gabriele Tinelli - thoughts on technology, investing, and more.",
+  icons: {
+    icon: "/images/habboicon.png",
+    apple: "/images/habboicon.png",
+  },
   openGraph: {
     title: "Gabriele Tinelli",
     description: "Personal website of Gabriele Tinelli",
