@@ -5,6 +5,15 @@ import { getInvestments, getPageContent } from '@/lib/content';
 export const metadata: Metadata = {
   title: 'Investments | Gabriele Tinelli',
   description: 'My investment portfolio, theses, and thinking on public and private markets.',
+  openGraph: {
+    title: 'Investments | Gabriele Tinelli',
+    description: 'My investment portfolio, theses, and thinking on public and private markets.',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Investments | Gabriele Tinelli',
+    description: 'My investment portfolio, theses, and thinking on public and private markets.',
+  },
 };
 
 export default function InvestmentsPage() {

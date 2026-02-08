@@ -3,15 +3,18 @@ import "./globals.css";
 import Layout from "@/components/Layout";
 
 export const metadata: Metadata = {
-  title: "Gabriele Tinelli",
-  description: "Gabriele Tinelli",
+  title: {
+    default: "Gabriele Tinelli",
+    template: "%s | Gabriele Tinelli",
+  },
+  description: "Personal website of Gabriele Tinelli - builder, investor, and technologist.",
   icons: {
     icon: "/images/habboicon.png",
     apple: "/images/habboicon.png",
   },
   openGraph: {
     title: "Gabriele Tinelli",
-    description: "Gabriele Tinelli",
+    description: "Personal website of Gabriele Tinelli - builder, investor, and technologist.",
     url: "https://gabtin.github.io",
     siteName: "Gabriele Tinelli",
     locale: "en_US",
@@ -20,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary",
     title: "Gabriele Tinelli",
-    description: "Gabriele Tinelli",
+    description: "Personal website of Gabriele Tinelli - builder, investor, and technologist.",
   },
   robots: {
     index: true,

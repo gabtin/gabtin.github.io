@@ -7,6 +7,15 @@ import { getSubstackPosts, SubstackPost } from '@/lib/rss';
 export const metadata: Metadata = {
   title: 'Thoughts | Gabriele Tinelli',
   description: 'Notes, essays, and ideas on technology, investing, and more.',
+  openGraph: {
+    title: 'Thoughts | Gabriele Tinelli',
+    description: 'Notes, essays, and ideas on technology, investing, and more.',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Thoughts | Gabriele Tinelli',
+    description: 'Notes, essays, and ideas on technology, investing, and more.',
+  },
 };
 
 export const revalidate = 3600; // Revalidate every hour for Substack posts

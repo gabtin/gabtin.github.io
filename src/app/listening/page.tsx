@@ -6,6 +6,15 @@ import { getListeningItems, getRecords, getPageContent } from '@/lib/content';
 export const metadata: Metadata = {
   title: 'Listening | Gabriele Tinelli',
   description: 'Podcasts, audiobooks, and audio content I\'ve been enjoying.',
+  openGraph: {
+    title: 'Listening | Gabriele Tinelli',
+    description: 'Podcasts, audiobooks, and audio content I\'ve been enjoying.',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Listening | Gabriele Tinelli',
+    description: 'Podcasts, audiobooks, and audio content I\'ve been enjoying.',
+  },
 };
 
 export default function ListeningPage() {

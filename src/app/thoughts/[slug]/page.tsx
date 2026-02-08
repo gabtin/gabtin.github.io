@@ -27,9 +27,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: 'Not Found' };
   }
 
+  const title = `${thought.title || 'Thought'} | Gabriele Tinelli`;
+  const description = thought.description || thought.content.slice(0, 160).replace(/[#*`]/g, '').trim();
+
   return {
-    title: `${thought.title || 'Thought'} | Gabriele Tinelli`,
-    description: thought.description || thought.content.slice(0, 160),
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: 'article',
+      publishedTime: thought.date,
+    },
+    twitter: {
+      card: 'summary',
+      title,
+      description,
+    },
   };
 }
 

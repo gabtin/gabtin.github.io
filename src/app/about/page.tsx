@@ -6,6 +6,15 @@ import { marked } from 'marked';
 export const metadata: Metadata = {
   title: 'About | Gabriele Tinelli',
   description: 'Learn more about Gabriele Tinelli - background, interests, and current projects.',
+  openGraph: {
+    title: 'About | Gabriele Tinelli',
+    description: 'Learn more about Gabriele Tinelli - background, interests, and current projects.',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'About | Gabriele Tinelli',
+    description: 'Learn more about Gabriele Tinelli - background, interests, and current projects.',
+  },
 };
 
 export default function AboutPage() {

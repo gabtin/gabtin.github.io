@@ -5,6 +5,15 @@ import { getBooks, getPageContent } from '@/lib/content';
 export const metadata: Metadata = {
   title: 'Reading | Gabriele Tinelli',
   description: 'Books I\'ve read, am reading, or plan to read.',
+  openGraph: {
+    title: 'Reading | Gabriele Tinelli',
+    description: 'Books I\'ve read, am reading, or plan to read.',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Reading | Gabriele Tinelli',
+    description: 'Books I\'ve read, am reading, or plan to read.',
+  },
 };
 
 export default function ReadingPage() {

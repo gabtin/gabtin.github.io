@@ -1,6 +1,21 @@
 import Image from 'next/image';
+import { Metadata } from 'next';
 import { getPageContent } from '@/lib/content';
 import { marked } from 'marked';
+
+export const metadata: Metadata = {
+  title: 'Gabriele Tinelli',
+  description: 'Personal website of Gabriele Tinelli - builder, investor, and technologist.',
+  openGraph: {
+    title: 'Gabriele Tinelli',
+    description: 'Personal website of Gabriele Tinelli - builder, investor, and technologist.',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Gabriele Tinelli',
+    description: 'Personal website of Gabriele Tinelli - builder, investor, and technologist.',
+  },
+};
 
 export default function Home() {
   const { title, subtitle, content } = getPageContent('home');

@@ -6,6 +6,15 @@ import { getPageContent } from '@/lib/content';
 export const metadata: Metadata = {
   title: 'Podcast | Gabriele Tinelli',
   description: 'BitBuilders - interviews with people building hard things in robotics and hardware.',
+  openGraph: {
+    title: 'Podcast | Gabriele Tinelli',
+    description: 'BitBuilders - interviews with people building hard things in robotics and hardware.',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Podcast | Gabriele Tinelli',
+    description: 'BitBuilders - interviews with people building hard things in robotics and hardware.',
+  },
 };
 
 export const revalidate = 3600; // Revalidate every hour
