@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "about.md",
+                "file": "thoughts/hardware-co-without-VC.mdx",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "about"
+              "title": "hardware-co-without-VC"
             }
           }
         ]
@@ -197,9 +197,10 @@
   },
   "active": "ecafbafac8534a76",
   "lastOpenFiles": [
+    "listening/titans-of-nuclear.mdx",
+    "about.md",
     "books/seven-brief-lessons-on-physics.md",
     "home.md",
-    "about.md",
     "books/the-metamorphosis.md",
     "books/the-intelligent-investor.md",
     "books/the-elegant-universe-superstrings-hidden-dimension.md",
@@ -213,7 +214,6 @@
     "listening.md",
     "listening/practical-nerds.mdx",
     "investments/botcrew.mdx",
-    "listening/titans-of-nuclear.mdx",
     "listening/quanta-podcast.mdx",
     "listening/mindscape-podcast.mdx",
     "records/ok-computer.md",
@@ -228,7 +228,6 @@
     "records/electric-ladyland.md",
     "records/dataverse.md",
     "records/convergence.md",
-    "records/aurora.md",
     "images/records/ledzep3.png",
     "images/records",
     "images",
