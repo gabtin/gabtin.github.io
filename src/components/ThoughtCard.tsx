@@ -9,21 +9,27 @@ interface ThoughtCardProps {
 export default function ThoughtCard({ thought }: ThoughtCardProps) {
   const hasSlug = !!thought.slug;
   const isExternal = !!thought.externalUrl;
-  const isClickable = hasSlug || isExternal;
 
-  const content = (
-    <div className={`card ${isClickable ? 'card-hover' : ''}`}>
+  const content = isExternal ? (
+    <div className="card card-hover">
       <div className="flex items-start justify-between gap-4 mb-2">
-        <div className="flex items-center gap-2">
-          {thought.source && (
-            <span className="label text-accent">{thought.source}</span>
-          )}
-          {thought.title ? (
-            <h3 className="font-mono text-base font-medium text-foreground">
-              {thought.title}
-            </h3>
-          ) : null}
-        </div>
+        <span className="label text-accent">{thought.source}</span>
+        <span className="label">{formatDateShort(thought.date)}</span>
+      </div>
+      <h3 className="font-mono text-base font-medium text-foreground">{thought.title}</h3>
+      {thought.description && (
+        <p className="text-muted text-sm mt-2">{thought.description}</p>
+      )}
+      <p className="text-accent text-sm font-mono mt-3">Read on {thought.source || 'external site'} →</p>
+    </div>
+  ) : (
+    <div className={`card ${hasSlug ? 'card-hover' : ''}`}>
+      <div className="flex items-start justify-between gap-4 mb-2">
+        {thought.title ? (
+          <h3 className="font-mono text-base font-medium text-foreground">
+            {thought.title}
+          </h3>
+        ) : null}
         <span className="label flex-shrink-0">{formatDateShort(thought.date)}</span>
       </div>
 
@@ -31,7 +37,7 @@ export default function ThoughtCard({ thought }: ThoughtCardProps) {
         <p className="text-muted text-sm mb-3">{thought.description}</p>
       )}
 
-      {!isClickable && (
+      {!hasSlug && (
         <div className="prose-custom text-sm">
           <p>{thought.content}</p>
         </div>
@@ -51,10 +57,7 @@ export default function ThoughtCard({ thought }: ThoughtCardProps) {
         </div>
       )}
 
-      {isExternal && (
-        <p className="text-accent text-sm font-mono mt-3">Read on {thought.source || 'external site'} →</p>
-      )}
-      {hasSlug && !isExternal && (
+      {hasSlug && (
         <p className="text-accent text-sm font-mono mt-3">Read more →</p>
       )}
     </div>
