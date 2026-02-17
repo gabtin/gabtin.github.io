@@ -8,15 +8,22 @@ interface ThoughtCardProps {
 
 export default function ThoughtCard({ thought }: ThoughtCardProps) {
   const hasSlug = !!thought.slug;
+  const isExternal = !!thought.externalUrl;
+  const isClickable = hasSlug || isExternal;
 
   const content = (
-    <div className={`card ${hasSlug ? 'card-hover' : ''}`}>
+    <div className={`card ${isClickable ? 'card-hover' : ''}`}>
       <div className="flex items-start justify-between gap-4 mb-2">
-        {thought.title ? (
-          <h3 className="font-mono text-base font-medium text-foreground">
-            {thought.title}
-          </h3>
-        ) : null}
+        <div className="flex items-center gap-2">
+          {thought.source && (
+            <span className="label text-accent">{thought.source}</span>
+          )}
+          {thought.title ? (
+            <h3 className="font-mono text-base font-medium text-foreground">
+              {thought.title}
+            </h3>
+          ) : null}
+        </div>
         <span className="label flex-shrink-0">{formatDateShort(thought.date)}</span>
       </div>
 
@@ -24,7 +31,7 @@ export default function ThoughtCard({ thought }: ThoughtCardProps) {
         <p className="text-muted text-sm mb-3">{thought.description}</p>
       )}
 
-      {!hasSlug && (
+      {!isClickable && (
         <div className="prose-custom text-sm">
           <p>{thought.content}</p>
         </div>
@@ -44,11 +51,22 @@ export default function ThoughtCard({ thought }: ThoughtCardProps) {
         </div>
       )}
 
-      {hasSlug && (
+      {isExternal && (
+        <p className="text-accent text-sm font-mono mt-3">Read on {thought.source || 'external site'} →</p>
+      )}
+      {hasSlug && !isExternal && (
         <p className="text-accent text-sm font-mono mt-3">Read more →</p>
       )}
     </div>
   );
+
+  if (isExternal) {
+    return (
+      <a href={thought.externalUrl} target="_blank" rel="noopener noreferrer" className="block no-underline">
+        {content}
+      </a>
+    );
+  }
 
   if (hasSlug) {
     return (

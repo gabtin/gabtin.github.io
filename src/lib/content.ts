@@ -41,6 +41,8 @@ export interface Thought {
   description?: string;
   draft?: boolean;
   image?: string;
+  externalUrl?: string;
+  source?: string;
   content: string;
   fileName: string;
 }
