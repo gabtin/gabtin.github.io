@@ -8,7 +8,7 @@ Based in Berlin. I try to map today's hardware and robotics wave to the physical
 
 A bunch of links to get started with some stuff I do:
 
-
+- [I wrote an article for Thesis Driven to help RE owner think about robots](https://www.thesisdriven.com/letters/beyond-the-hype-an-owners-guide-to-construction-robotics/)
 - [99.5% of hardware companies don't know what venture capital is](/thoughts/hardware-co-without-VC)
 - [Builders Take All, my substack newsletter](https://gabrieletinelli.substack.com)
 - [BitBuilders, my podcast](https://open.spotify.com/show/1y5r74qzatrFOaxGbDf6iA)
