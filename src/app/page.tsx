@@ -54,6 +54,18 @@ export default function Home() {
         {subtitle && <p className="text-lg">{subtitle}</p>}
       </section>
 
+      {/* GIF */}
+      <section className="overflow-hidden rounded-lg" style={{ height: '300px' }}>
+        <Image
+          src="/images/TcvbOP.gif"
+          alt="Pixel art animation"
+          width={700}
+          height={500}
+          className="w-full h-auto"
+          unoptimized
+        />
+      </section>
+
       {/* Content from markdown */}
       {content && (
         <>
