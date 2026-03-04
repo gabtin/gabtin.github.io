@@ -1,0 +1,186 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1771929768939,
+  "projectRoot": "/Users/gabrieletinelli/Desktop/personalwebsite",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "next",
+        "version": "14.2.35",
+        "category": "fullstack"
+      },
+      {
+        "name": "react",
+        "version": "18",
+        "category": "frontend"
+      },
+      {
+        "name": "react-dom",
+        "version": "18",
+        "category": "frontend"
+      }
+    ],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "npm run build",
+    "testCommand": null,
+    "lintCommand": "npm run lint",
+    "devCommand": "npm run dev",
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "lint": "next lint",
+      "generate-previews": "npx tsx scripts/generate-previews.ts"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": "type-based"
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "public",
+      "scripts",
+      "src"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "content": {
+      "path": "content",
+      "purpose": null,
+      "fileCount": 9,
+      "lastAccessed": 1771929768916,
+      "keyFiles": [
+        "about.md",
+        "home.md",
+        "investments.md",
+        "listening.md",
+        "podcast.md"
+      ]
+    },
+    "out": {
+      "path": "out",
+      "purpose": "Build output",
+      "fileCount": 4,
+      "lastAccessed": 1771929768924,
+      "keyFiles": [
+        "404.html",
+        "index.html",
+        "index.txt"
+      ]
+    },
+    "public": {
+      "path": "public",
+      "purpose": "Public files",
+      "fileCount": 1,
+      "lastAccessed": 1771929768924,
+      "keyFiles": []
+    },
+    "scripts": {
+      "path": "scripts",
+      "purpose": "Build/utility scripts",
+      "fileCount": 1,
+      "lastAccessed": 1771929768925,
+      "keyFiles": [
+        "generate-previews.ts"
+      ]
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 1,
+      "lastAccessed": 1771929768925,
+      "keyFiles": []
+    },
+    "out/api": {
+      "path": "out/api",
+      "purpose": "API routes",
+      "fileCount": 0,
+      "lastAccessed": 1771929768928,
+      "keyFiles": []
+    },
+    "out/assets": {
+      "path": "out/assets",
+      "purpose": "Static assets",
+      "fileCount": 0,
+      "lastAccessed": 1771929768932,
+      "keyFiles": []
+    },
+    "public/assets": {
+      "path": "public/assets",
+      "purpose": "Static assets",
+      "fileCount": 0,
+      "lastAccessed": 1771929768932,
+      "keyFiles": []
+    },
+    "src/app": {
+      "path": "src/app",
+      "purpose": "Application code",
+      "fileCount": 4,
+      "lastAccessed": 1771929768932,
+      "keyFiles": [
+        "globals.css",
+        "layout.tsx",
+        "not-found.tsx"
+      ]
+    },
+    "src/components": {
+      "path": "src/components",
+      "purpose": "UI components",
+      "fileCount": 12,
+      "lastAccessed": 1771929768932,
+      "keyFiles": [
+        "ActivityFeed.tsx",
+        "BookCard.tsx",
+        "Footer.tsx"
+      ]
+    },
+    "src/lib": {
+      "path": "src/lib",
+      "purpose": "Library code",
+      "fileCount": 3,
+      "lastAccessed": 1771929768933,
+      "keyFiles": [
+        "content.ts",
+        "rss.ts",
+        "utils.ts"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "src/lib/rss.ts",
+      "accessCount": 1,
+      "lastAccessed": 1771929792195,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}
