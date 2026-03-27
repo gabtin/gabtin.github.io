@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Personal portfolio website built with Next.js 14 (App Router), TypeScript, and Tailwind CSS. Deploys as a static site to GitHub Pages.
+My personal portfolio website built with Next.js 14 (App Router), TypeScript, and Tailwind CSS. Deploys as a static site to GitHub Pages.
 
 ## Commands
 
