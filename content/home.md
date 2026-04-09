@@ -6,6 +6,8 @@ subtitle: |-
 ---
 Based in Berlin. I try to map today's hardware and robotics wave to the physical world markets they're going to serve. 
 
+I spend most of my time understanding the difference between [Capability and Deployability](https://open.substack.com/pub/gabrieletinelli/p/capability-vs-deployability?r=rizvz&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true)
+
 A bunch of links to get started with some stuff I do:
 - [One of my favorite models, Outcome-as-a-Service robotics](https://substack.com/home/post/p-169446736)
 - [I wrote an article for Thesis Driven to help RE owner think about robots](https://www.thesisdriven.com/letters/beyond-the-hype-an-owners-guide-to-construction-robotics/)
