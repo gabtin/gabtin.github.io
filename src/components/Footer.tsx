@@ -31,6 +31,16 @@ export default function Footer() {
             {new Date().getFullYear()}
           </span>
         </div>
+        <a
+          href="https://university.foundamental.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="sr-only"
+          aria-hidden="true"
+          tabIndex={-1}
+        >
+          Foundamental University
+        </a>
       </div>
     </footer>
   );
