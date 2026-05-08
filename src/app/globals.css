@@ -237,6 +237,7 @@ body {
   }
 
   .home-content a {
+    @apply font-pixel text-xl;
     text-decoration: underline;
     text-underline-offset: 2px;
   }
